@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IRONCODEX guia</title>
+  <meta name="description" content="Guía para principiantes del gym: rutinas, ejercicios por grupo muscular, técnica, métodos, armwrestling y mitos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="barra">
+    <a class="logo" id="logo" href="#inicio">IRONCODEX</a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#rutinas">Rutinas</a>
+      <a href="#ejercicios">Ejercicios</a>
+      <a href="#tecnica">Técnica</a>
+      <a href="#metodos">Métodos</a>
+      <a href="#mitos">Mitos</a>
+    </nav>
+  </header>
+
+  <div class="contenedor">
+    <main>
+    
+      <section id="inicio" class="tarjeta perfil">
+        <figure class="foto-perfil">
+          <img src="https://media.tenor.com/hyjA7k9wrM4AAAAM/sam-sulek-sam-sulek-gif.gif" alt="Sam Sulek entrenando">
+        </figure>
+        <div>
+          <h1>Guía del gym para principiantes</h1>
+          <p class="subtitulo">Rutinas, ejercicios, técnica y mitos</p>
+          <h2>Empieza aquí</h2>
+          <p>Elige una rutina, aprende los ejercicios de cada músculo y revisa la técnica de los tres grandes. 
+            Sam Sulek es un ejemplo de constancia y volumen alto, no un modelo a copiar tal cual.</p>
+        </div>
+      </section>
+
+  
+      <section id="fundamentos" class="tarjeta">
+        <h2>Fundamentos</h2>
+        <ul class="lista">
+          <li><strong>Sobrecarga progresiva:</strong> pide un poco más que la vez anterior (una repetición, algo de peso o mejor control).</li>
+          <li><strong>Técnica primero:</strong> el peso es solo un número; una buena ejecución protege articulaciones y enfoca el músculo.</li>
+          <li><strong>Descanso y sueño:</strong> creces mientras descansas. Deja al menos un día entre sesiones del mismo músculo.</li>
+          <li><strong>Comer suficiente:</strong> proteína en cada comida y calorías acordes a tu meta.</li>
+        </ul>
+      </section>
+
+      <section id="rutinas" class="tarjeta">
+        <h2>Rutinas famosas</h2>
+        <div class="pestanas" role="tablist" aria-label="Tipos de rutina">
+          <button role="tab" aria-selected="true" aria-controls="rutina-ppl" id="pestana-ppl">Push Pull Legs</button>
+          <button role="tab" aria-selected="false" aria-controls="rutina-arnold" id="pestana-arnold">Arnold Split</button>
+          <button role="tab" aria-selected="false" aria-controls="rutina-fullbody" id="pestana-fullbody">Full Body</button>
+        </div>
+
+        <div class="subtarjeta" role="tabpanel" id="rutina-ppl" aria-labelledby="pestana-ppl">
+          <h3>Push Pull Legs (3 a 6 días)</h3>
+          <p>Separa el cuerpo por movimiento: empujar, jalar y piernas. Con 6 días repites cada grupo dos veces por semana.</p>
+          <ul class="lista">
+            <li><strong>Push:</strong> pecho, hombros y tríceps.</li>
+            <li><strong>Pull:</strong> espalda y bíceps.</li>
+            <li><strong>Legs:</strong> cuádriceps, femorales, glúteos y pantorrillas.</li>
+          </ul>
+        </div>
+        <div class="subtarjeta" role="tabpanel" id="rutina-arnold" aria-labelledby="pestana-arnold" hidden>
+          <h3>Arnold Split (6 días, volumen alto)</h3>
+          <p>Inspirada en Arnold Schwarzenegger: cada músculo se entrena dos veces por semana. Es exigente, mejor con algo de base.</p>
+          <ul class="lista">
+            <li><strong>Lunes y jueves:</strong> pecho y espalda.</li>
+            <li><strong>Martes y viernes:</strong> hombros y brazos.</li>
+            <li><strong>Miércoles y sábado:</strong> piernas y zona lumbar.</li>
+            <li><strong>Domingo:</strong> descanso.</li>
+          </ul>
+        </div>
+        <div class="subtarjeta" role="tabpanel" id="rutina-fullbody" aria-labelledby="pestana-fullbody" hidden>
+          <h3>Full Body (3 días, ideal para empezar)</h3>
+          <p>Todo el cuerpo en cada sesión con un día de descanso entre ellas (por ejemplo lunes, miércoles y viernes).</p>
+          <ul class="lista">
+            <li>Una sentadilla o prensa de piernas</li>
+            <li>Un empuje horizontal (press de banca) y un jalón o remo</li>
+            <li>Press de hombro, plancha y un ejercicio de brazos</li>
+          </ul>
+        </div>
+      </section>
+
+      
+      <section id="ejercicios" class="tarjeta">
+        <h2>Ejercicios por grupo muscular</h2>
+        <p>Elige un músculo y verás cómo hacer sus ejercicios y el error más común.</p>
+        <div id="selector-grupos" class="chips" role="group" aria-label="Grupos musculares"></div>
+        <div id="lista-ejercicios" class="ejercicios" aria-live="polite"></div>
+      </section>
+
+   
+      <section id="tecnica" class="tarjeta">
+        <h2>Técnica de los tres grandes</h2>
+        <h3>Sentadilla</h3>
+        <ul class="lista">
+          <li>Pies al ancho de hombros, puntas ligeramente abiertas.</li>
+          <li>Respira hacia el abdomen y aprieta el core antes de bajar.</li>
+          <li>Las rodillas siguen la dirección de los pies.</li>
+          <li>Baja hasta donde tu movilidad permita con la espalda neutra.</li>
+          <li>Si se levantan los talones, trabaja movilidad de tobillo o usa calzado plano.</li>
+        </ul>
+        <h3>Press de banca</h3>
+        <ul class="lista">
+          <li>Junta las escápulas y mantenlas atrás y abajo.</li>
+          <li>Pies firmes en el suelo; empuja con las piernas.</li>
+          <li>Agarre un poco más ancho que los hombros, muñecas rectas.</li>
+          <li>Baja controlado a la parte baja del pecho, sin rebotar, con codos a 45–70°.</li>
+          <li>Usa seguros o un compañero al subir carga.</li>
+        </ul>
+        <h3>Peso muerto</h3>
+        <ul class="lista">
+          <li>Barra sobre la mitad del pie, casi rozando las espinillas.</li>
+          <li>Espalda neutra y dorsales activados, como guardando la barra en las axilas.</li>
+          <li>Empuja el piso en lugar de «jalar» la barra; cadera y hombros suben juntos.</li>
+          <li>Termina erguido apretando glúteos, sin arquear de más la espalda.</li>
+        </ul>
+      </section>
+
+  
+      <section id="metodos" class="tarjeta">
+        <h2>Métodos de entrenamiento</h2>
+        <h3>Método Bilbo</h3>
+        <p>Creado por el powerlifter Jesús Varela para el press de banca. Se apoya en repeticiones explosivas en la subida, 
+          bajada controlada sin rebote y cargas relativamente ligeras,
+           buscando estrés metabólico; después se trabaja el pectoral en series de 8 a 15 repeticiones.
+            Para el esquema exacto consulta <a href="https://fitgeneration.es/metodo-bilbo/" target="_blank" rel="noopener">esta explicación</a>.</p>
+        <h3>Sobrecarga progresiva</h3>
+        <p>Cada semana sube una sola variable: repeticiones, peso, series o control. Ejemplo: 3×8 con 40 kg; cuando logres 3×10, sube a 42.5 kg y vuelve a 3×8.</p>
+        <h3>Sobrecarga del núcleo (core)</h3>
+        <p>El core también progresa: plancha con lastre, rueda abdominal, Pallof press y caminata de granjero. 
+          Añade tiempo, carga o palanca poco a poco; un core fuerte estabiliza la sentadilla y el peso muerto.</p>
+      </section>
+
+    
+      <section id="armwrestling" class="tarjeta">
+        <h2>Rutina de armwrestling</h2>
+        <p>Dos o tres sesiones por semana, 3 series de 8 a 12 repeticiones, con calentamiento de muñeca y codo.</p>
+        <ul class="lista">
+          <li><strong>Pronación y supinación:</strong> giro del antebrazo con pesa de mango largo o polea.</li>
+          <li><strong>Curl de muñeca:</strong> flexión y desviación radial.</li>
+          <li><strong>Curl martillo:</strong> braquial y antebrazo.</li>
+          <li><strong>Presión lateral:</strong> jalón en polea con el brazo cruzando el cuerpo.</li>
+          <li><strong>Dedos y agarre:</strong> extensiones con banda y caminata de granjero.</li>
+          <li><strong>Espalda:</strong> dominadas y remos, que dan la fuerza de jalón.</li>
+        </ul>
+        <p class="nota">Precaución: evita tirones bruscos y para si sientes dolor en codo u hombro. Muchas lesiones vienen de arrancar sin calentar o con mala posición.</p>
+      </section>
+
+      
+      <section id="mitos" class="tarjeta">
+        <h2>Mitos del gym desmentidos</h2>
+        <div class="acordeon">
+          <details><summary>«Levantar pesas te hará demasiado grande»</summary><p>Ganar masa es lento y requiere años de constancia, comida y entrenamiento intenso. Lo habitual es un cuerpo más firme y fuerte, no voluminoso de un día para otro.</p></details>
+          <details><summary>«Tienes 30 minutos después de entrenar para comer proteína»</summary><p>La ventana anabólica es mucho más amplia de lo que se creía. Importa más la proteína total del día repartida en varias comidas.</p></details>
+          <details><summary>«Los abdominales queman la grasa del abdomen»</summary><p>No se puede elegir de dónde se pierde la grasa. Los abdominales fortalecen el músculo, pero perder grasa depende del déficit calórico general.</p></details>
+          <details><summary>«La sentadilla profunda destruye las rodillas»</summary><p>Bien ejecutada y con carga progresiva es segura. El problema suele ser la técnica o la carga excesiva.</p></details>
+          <details><summary>«Sin dolor al día siguiente no sirvió el entrenamiento»</summary><p>Las agujetas indican novedad, no calidad. Puedes progresar sin sentir dolor.</p></details>
+          <details><summary>«El músculo se convierte en grasa si dejas de entrenar»</summary><p>Son tejidos distintos y no se transforman. Si dejas de entrenar y comes igual, el músculo se reduce y puede acumularse grasa aparte.</p></details>
+        </div>
+      </section>
+    </main>
+
+    <aside class="lateral">
+      <nav class="panel-rojo" aria-label="Índice">
+        <h2>ÍNDICE</h2>
+        <a href="#fundamentos">Fundamentos</a>
+        <a href="#rutinas">Rutinas</a>
+        <a href="#ejercicios">Ejercicios</a>
+        <a href="#tecnica">Técnica</a>
+        <a href="#metodos">Métodos</a>
+        <a href="#armwrestling">Armwrestling</a>
+        <a href="#mitos">Mitos</a>
+      </nav>
+    </aside>
+  </div>
+
+  <footer class="pie">
+    <p> Esta pagina esta hecha para ayudarte a aprender sobre el entrenamiento en el gimnasio.</p>
+  </footer>
+
+  <a class="subir" href="#inicio" aria-label="Volver arriba">↑</a>
+
+  <!-- Teclear el logo o escuchar "sulek" -->
+  <dialog id="dialogo-secreto" class="dialogo">
+    <form method="dialog" class="dialogo-cerrar"><button aria-label="Cerrar">✕</button></form>
+    <h2>¿Con quién te pareces?</h2>
+    <p>Ingresa tu altura y peso para ver qué fisicoculturistas legendarios se parecen más a ti.</p>
+    <div class="campos">
+      <label>Altura (cm) <input type="number" id="campo-altura" min="120" max="230" value="170"></label>
+      <label>Peso (kg) <input type="number" id="campo-peso" min="35" max="200" value="70"></label>
+      <button class="boton" id="boton-comparar" type="button">Comparar</button>
+    </div>
+    <div id="resultados-secreto" class="resultados" aria-live="polite"></div>
+    <p class="nota">Medidas aproximadas en competencia; varían según la fuente y la época.</p>
+  </dialog>
+
+  <script src="ejercicios-datos.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
